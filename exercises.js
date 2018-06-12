@@ -8,7 +8,7 @@
 var doubleArray = function(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2) 
+    result.push(arr[i] * 2);
   }
   return result
 }
@@ -21,7 +21,20 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+var sumArrays = function (arr1, arr2) {
+  var result = 0;
+
+  for (let i = 0; i < arr1.length; i++) {
+    result += arr1[i];
+  }
+  
+  for (let i = 0; i < arr1.length; i++) {
+    result += arr2[i];
+  }
+
+  return result
+ }
+
 
 /* #stringCount
  *
@@ -30,7 +43,9 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(str) {
+  return str.length;
+}
 
 /* #arrayLength
  *
@@ -39,7 +54,9 @@ var stringCount;
  * @param {Array}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arr) {
+  return arr.length;
+}
 
 /* #countAll
  *
@@ -48,7 +65,15 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr) {
+  var sum = 0;
+  
+  for(let i=0; i < arr.length; i++) {
+    sum += arr[i];
+  }  
+
+  return sum;
+}
 
 /* #countStrings
  *
@@ -57,7 +82,15 @@ var countAll;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+var countStrings = function(arr) {
+  var arrStrLength = [];
+
+  for(let i=0; i < arr.length; i++) {
+    arrStrLength.push(arr[i].length);
+  }
+
+  return arrStrLength;
+}
 
 /* #countAllStrings
  *
@@ -66,7 +99,15 @@ var countStrings;
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+var countAllStrings = function(arr) {
+  var sum = 0;
+
+  for(let i=0; i < arr.length; i++) {
+   sum += arr[i].length;
+  }
+
+  return sum;
+}
 
 /* #convertToArray
  *
@@ -75,7 +116,15 @@ var countAllStrings;
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+var convertToArray = function(obj) {
+  var arr = [];
+
+  for (x in obj) {
+    arr.push(obj[x]);
+  }
+
+  return arr;
+}
 
 /* #objectSize
  *
@@ -84,7 +133,15 @@ var convertToArray;
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+var objectSize = function(obj) {
+  var num = 0;
+
+  for (x in obj) {
+    num ++;
+  }
+
+  return num;
+}
 
 /* #createZeroFilledArray
  *
@@ -93,7 +150,15 @@ var objectSize;
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+var createZeroFilledArray = function (num) {
+  var Zero = [];
+
+  for (let i = 0; i < num; i++) {
+    Zero.push(0);
+  }
+
+  return Zero;
+}
 
 /* #poppedArray
  *
@@ -102,7 +167,10 @@ var createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+var poppedArray = function(arr) {
+  arr.pop();
+  return arr;
+}
 
 /* #splitString
  *
@@ -370,17 +438,17 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
-  countStrings: null,
-  countAllStrings: null,
-  convertToArray: null,
-  objectSize: null,
-  createZeroFilledArray: null,
-  poppedArray: null,
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
+  countStrings: countStrings,
+  countAllStrings: countAllStrings,
+  convertToArray: convertToArray,
+  objectSize: objectSize,
+  createZeroFilledArray: createZeroFilledArray,
+  poppedArray: poppedArray,
   splitString: null,
   lengthOfLast: null,
   sumBelowTen: null,
